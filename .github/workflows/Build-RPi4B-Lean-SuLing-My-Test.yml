@@ -103,7 +103,8 @@ jobs:
         run: |
           cd openwrt
           mkdir -p files/etc/uci-defaults/
-          cp ../scripts/init-settings.sh files/etc/uci-defaults/99-init-settings
+          cp ../script/rpi4-init.sh files/etc/uci-defaults/99-init-settings
+          chmod +x files/etc/uci-defaults/99-init-settings
           echo -e "$(nproc) thread compile"
           make -j$(nproc) || make -j1 || make -j1 V=s
           echo "::set-output name=status::success"
