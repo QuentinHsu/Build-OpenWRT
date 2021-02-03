@@ -1,5 +1,3 @@
-
-
 #支持 iPhone、Android USB 共享网络，无需手动配置 WAN
 # uci set network.usb_network=interface
   # 树莓派4b 将 USB 网卡识别并设置成 erh1
