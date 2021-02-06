@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/SuLing-My.config
-  DIY_P1_SH: script/DIY-SuLing-Lean-Part1.sh
-  DIY_P2_SH: script/rpi4-init.sh
+  DIY_P1_SH: script/DIY-Part1-Lean-SuLing.sh
+  DIY_P2_SH: script/DIY-Part2-RPi4B-Init.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
