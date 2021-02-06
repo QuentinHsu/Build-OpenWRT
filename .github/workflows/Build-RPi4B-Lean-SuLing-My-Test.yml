@@ -114,7 +114,7 @@ jobs:
         id: generate
         run: |
           mkdir -p files/etc/uci-defaults/
-          cp ../script/rpi4-init.sh files/etc/uci-defaults/99-init-settings
+          cp ../script/rpi4b-init.sh files/etc/uci-defaults/99-init-settings
           chmod +x files/etc/uci-defaults/99-init-settings
 
       - name: Check space usage
