@@ -1,7 +1,13 @@
 # Build OpenWRT
 ## 关于固件
 
-### 默认后台控制台访问地址
+### 机型
+
+| 厂商       | 机型 | 编译      |
+| ------------ | ---- | ----------- |
+| Raspberry Pi | 4B   | [Lean·master](https://github.com/QuentinHsu/Build-OpenWRT/actions?query=workflow%3A%22Build+RPi4B+Lean%27+OpenWRT%22) |
+
+### 默认后台控制页面访问地址
 
 **192.168.100.1**
 
@@ -21,7 +27,8 @@
 
 ### 特色
 
-- 插上受支持的 USB 转以太网口网卡，自动配置 WAN 口联网。无需手动配置 WAN 口。
+- 插上受驱动支持的 USB 转以太网口网卡，自动配置 WAN 口联网。
+  - 无需手动配置 WAN 口。
 - 支持 iPhone、Android 通过 USB 共享网络。
 
 ## Acknowledgments
