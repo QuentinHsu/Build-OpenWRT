@@ -80,9 +80,8 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         chmod +x script/*.sh
+        cd openwrt
         script/Preset-Terminal-Tools.sh
-        # cd openwrt
-        # $GITHUB_WORKSPACE/$DIY_P2_SH
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
