@@ -81,8 +81,9 @@ jobs:
         chmod +x $DIY_P2_SH
         chmod +x script/*.sh
         # cd openwrt
+        # $GITHUB_WORKSPACE/$DIY_P2_SH
         cd $OPENWRTROOT
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        ../$DIY_P2_SH
         ../script/Preset-Terminal-Tools.sh
 
     - name: SSH connection to Actions
