@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/project-openwrt/openwrt
   REPO_BRANCH: openwrt-18.06-k5.4
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: config/mini/Rockchip-R2S.config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: script/mini/DIY-Part1-Rockchip-R2S-Init.sh
+  CONFIG_FILE: config/Rockchip-R2S/Rockchip-R2S.config
+  DIY_P1_SH: script/Rockchip-R2S/DIY-Part1-Rockchip-R2S.sh
+  DIY_P2_SH: script/Rockchip-R2S/DIY-Part2-Rockchip-R2S.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -78,9 +78,11 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
+        # chmod +x $DIY_P2_SH
+        chmod +x script/*.sh
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        ../script/Preset-Terminal-Tools.sh
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
