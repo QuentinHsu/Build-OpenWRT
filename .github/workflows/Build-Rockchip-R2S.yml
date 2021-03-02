@@ -83,7 +83,7 @@ jobs:
         # cd openwrt
         # $GITHUB_WORKSPACE/$DIY_P2_SH
         cd $OPENWRTROOT
-        ../$DIY_P2_SH
+        $DIY_P2_SH
         ../script/Preset-Terminal-Tools.sh
 
     - name: SSH connection to Actions
